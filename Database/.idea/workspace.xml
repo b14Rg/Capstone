@@ -2,7 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fd26abf-bd1e-4774-b013-ba249e88e322" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/capstoneapi/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/CapstoneApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/configuration/CapstoneApiConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/controller/AuthenticationEngine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/controller/BillRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/controller/ExpenseRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/controller/ItemRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/controller/UserRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/exception/AuthenticationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/exception/ExceptionHandlerConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/exception/NoSuchEntityException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/Bill.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/Budget.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/Credentials.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/Expense.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/Income.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/repositories/BillJpaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/repositories/BudgetJpaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/repositories/CredentialsJpaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/repositories/ExpensesJpaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/repositories/IncomeJpaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/repositories/ItemJpaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/repositories/UserJpaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/Capstone.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/capstone_application/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/capstone_application/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/$PRODUCT_WORKSPACE_FILE$" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Database.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,13 +44,32 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1S2KYEykUOLvXFkvSUCFYJ4IIIb" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RunDashboard">
@@ -30,6 +83,26 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="CapstoneApi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="johnson.sean.capstoneapi.CapstoneApi" />
+      <module name="capstoneapi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="johnson.sean.capstoneapi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CapstoneApi" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -49,7 +122,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
