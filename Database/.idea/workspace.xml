@@ -1,43 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3fd26abf-bd1e-4774-b013-ba249e88e322" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/capstoneapi/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/CapstoneApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/configuration/CapstoneApiConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/controller/AuthenticationEngine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/controller/BillRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/controller/ExpenseRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/controller/ItemRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/controller/UserRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/exception/AuthenticationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/exception/ExceptionHandlerConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/exception/NoSuchEntityException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/Bill.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/Budget.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/Credentials.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/Expense.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/Income.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/repositories/BillJpaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/repositories/BudgetJpaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/repositories/CredentialsJpaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/repositories/ExpensesJpaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/repositories/IncomeJpaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/repositories/ItemJpaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/repositories/UserJpaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/Capstone.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Application/capstone_application/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/capstone_application/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/$PRODUCT_WORKSPACE_FILE$" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Database.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="3fd26abf-bd1e-4774-b013-ba249e88e322" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
