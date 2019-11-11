@@ -35,8 +35,8 @@ public class UserRestController {
     @RequestMapping(path = "", method = RequestMethod.POST)
     @Transactional
     public Integer createUser(@RequestBody User user, HttpServletRequest request) {
-        String header = request.getHeader("Authorization");
-        authenticate.auth(header);
+//        String header = request.getHeader("Authorization");
+//        authenticate.auth(header);
         credentialsReop.saveAndFlush(user.getCredentials());
         incomeRepo.saveAndFlush(user.getIncome());
         budgetRepo.saveAndFlush(user.getBudget());
@@ -57,7 +57,12 @@ public class UserRestController {
     @RequestMapping(path = "/{userId}", method = RequestMethod.DELETE)
     @Transactional
     public void deleteUser(@PathVariable int userId) {
-        userRepo.deleteById(userId);
+        User user = getById(userId);
+        userRepo.deleteById(user.getId());
+        credentialsReop.deleteById(user.getCredentials().getId());
+        incomeRepo.deleteById(user.getIncome().getId());
+        budgetRepo.deleteById(user.getBudget().getId());
+
     }
 
     @RequestMapping(path = "/{userId}", method = RequestMethod.PUT)

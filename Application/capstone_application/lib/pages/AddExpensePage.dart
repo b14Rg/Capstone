@@ -6,8 +6,10 @@ class AddExpensePage extends StatefulWidget {
 }
 
 class _AddExpenseState extends State<AddExpensePage> {
+  int _count = 1;
   @override
   Widget build(BuildContext context) {
+    List<Widget> _itemRows = new List.generate(_count,(int i) => new ItemRow());
     return Scaffold(
       appBar: AppBar(
         leading: FloatingActionButton(
@@ -30,82 +32,13 @@ class _AddExpenseState extends State<AddExpensePage> {
           ),
           Text('Items'),
           Column(
-            children: <Widget>[
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Flexible(
-                    child: TextField(
-                      decoration: InputDecoration(
-                        hintText: 'Item A'
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 20.0,
-                  ),
-                  Flexible(
-                    child: TextField(
-                      decoration: InputDecoration(
-                        hintText: '\$00.00'
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Flexible(
-                    child: TextField(
-                      decoration: InputDecoration(
-                        hintText: 'Item B'
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 20.0,
-                  ),
-                  Flexible(
-                    child: TextField(
-                      decoration: InputDecoration(
-                        hintText: '\$00.00'
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Flexible(
-                    child: TextField(
-                      decoration: InputDecoration(
-                        hintText: 'Item C'
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 20.0,
-                  ),
-                  Flexible(
-                    child: TextField(
-                      decoration: InputDecoration(
-                        hintText: '\$00.00'
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ],
+            children: _itemRows,
           ),
           FloatingActionButton.extended(
             heroTag: 1,
             elevation: 0,
             label: const Icon(Icons.add),
-            onPressed: () {
-              
-            },
+            onPressed: _addNewItemRow,
           ),
           Expanded(
             child: Text('Amount:\t\$00.00', textAlign: TextAlign.center,),
@@ -122,6 +55,46 @@ class _AddExpenseState extends State<AddExpensePage> {
             },
           ),
         ),
+    );
+  }
+  void _addNewItemRow() {
+    setState(() {
+      _count = _count + 1;
+    });
+  }
+}
+
+class ItemRow extends StatefulWidget {
+  @override
+  _ItemRowState createState() => _ItemRowState();
+}
+
+class _ItemRowState extends State<ItemRow> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Flexible(
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: 'Item'
+              ),
+            ),
+          ),
+          SizedBox(
+            width: 20.0,
+          ),
+          Flexible(
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: '\$00.00'
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

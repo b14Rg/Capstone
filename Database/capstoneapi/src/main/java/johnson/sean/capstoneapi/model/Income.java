@@ -1,5 +1,7 @@
 package johnson.sean.capstoneapi.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -13,6 +15,11 @@ public class Income {
     @Column(nullable = false)
     private boolean weekly;
     private boolean monthly;
+
+//    @OneToOne
+//    @JoinColumn(name = "user_id", nullable = false)
+//    @JsonIgnore
+//    private User user;
 
     public int getId() {
         return id;
@@ -45,4 +52,12 @@ public class Income {
     public void setMonthly(boolean monthly) {
         this.monthly = monthly;
     }
+
+//    public User getUser() {
+//        return user;
+//    }
+//
+//    public void setUser(User user) {
+//        this.user = user;
+//    }
 }

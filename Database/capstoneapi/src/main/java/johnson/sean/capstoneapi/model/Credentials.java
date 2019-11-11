@@ -1,5 +1,7 @@
 package johnson.sean.capstoneapi.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -12,6 +14,11 @@ public class Credentials {
     private String username;
     @Column(nullable = false)
     private String password;
+
+//    @OneToOne
+//    @JoinColumn(name = "user_id", nullable = false)
+//    @JsonIgnore
+//    private User user;
 
     public int getId() {
         return id;
@@ -36,4 +43,12 @@ public class Credentials {
     public void setPassword(String password) {
         this.password = password;
     }
+
+//    public User getUser() {
+//        return user;
+//    }
+//
+//    public void setUser(User user) {
+//        this.user = user;
+//    }
 }

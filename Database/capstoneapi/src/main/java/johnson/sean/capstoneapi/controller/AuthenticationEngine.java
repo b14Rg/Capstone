@@ -10,10 +10,10 @@ public class AuthenticationEngine {
             throw new AuthenticationException();
         }
         String rawCredentials = new String(Base64.getDecoder().decode(authHeaderValues));
-        String[] credentials_parts = rawCredentials.split(":");
-        String username = credentials_parts[0].trim();
-        String password = credentials_parts[1];
-        if(!username.equals("user") || !password.equals("test")) {
+        String[] parts = rawCredentials.split(":");
+        String username = parts[0].trim();
+        String password = parts[1];
+        if(!username.equals("joe") || !password.equals("test")) {
             throw new AuthenticationException();
         }
     }
