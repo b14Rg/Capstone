@@ -2,74 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fd26abf-bd1e-4774-b013-ba249e88e322" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/capstoneapi.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jnr_jffi_1_2_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jnr_jffi_native_1_2_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jnr_jnr_a64asm_1_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jnr_jnr_constants_0_9_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jnr_jnr_enxio_0_21.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jnr_jnr_ffi_2_1_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jnr_jnr_posix_3_0_50.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jnr_jnr_unixsocket_0_23.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jnr_jnr_x86asm_1_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_api_api_common_1_8_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_api_client_google_api_client_1_28_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_api_gax_1_45_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_api_grpc_proto_google_common_protos_1_16_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_api_grpc_proto_google_iam_v1_0_12_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_apis_google_api_services_sqladmin_v1beta4_rev20190510_1_28_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_auth_google_auth_library_credentials_0_16_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_auth_google_auth_library_oauth2_http_0_16_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_cloud_google_cloud_core_1_78_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_cloud_sql_jdbc_socket_factory_core_1_0_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_cloud_sql_mysql_socket_factory_1_0_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_failureaccess_1_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_27_1_android.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_http_client_google_http_client_1_30_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_http_client_google_http_client_apache_2_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_http_client_google_http_client_jackson2_1_28_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_oauth_client_google_oauth_client_1_28_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_7_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_util_3_7_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_grpc_grpc_context_1_19_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_opencensus_opencensus_api_0_21_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_opencensus_opencensus_contrib_http_util_0_21_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_compat_qual_2_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_5_3_7_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_7_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_analysis_7_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_commons_7_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_tree_7_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_util_7_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_gcp_autoconfigure_1_1_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_gcp_core_1_1_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_gcp_starter_1_1_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_gcp_starter_sql_mysql_1_1_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_threeten_threetenbp_1_3_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/capstone_auth.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/resources/auth_file.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/capstoneapi/src/main/webapp/WEB-INF/appengine-web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mariadb_jdbc_mariadb_java_client_2_3_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/capstoneapi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/capstoneapi.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/controller/AuthenticationEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/controller/AuthenticationEngine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/controller/BillRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/controller/BillRestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/controller/ExpenseRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/controller/ExpenseRestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/controller/ItemRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/controller/ItemRestController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/controller/UserRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/controller/UserRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/model/Budget.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/model/Budget.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/model/Credentials.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/model/Credentials.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/model/Income.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/model/Income.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -180,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573446123493</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Deployed to google app engine&#10;Connects to google cloud sql and hosts api via localhost">
+      <created>1573585762161</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1573585762161</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -199,6 +145,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Fixed deleting a user also deletes the connected tables&#10;credentials&#10;income&#10;budget" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed deleting a user also deletes the connected tables&#10;credentials&#10;income&#10;budget" />
+    <MESSAGE value="Deployed to google app engine&#10;Connects to google cloud sql and hosts api via localhost" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deployed to google app engine&#10;Connects to google cloud sql and hosts api via localhost" />
   </component>
 </project>
