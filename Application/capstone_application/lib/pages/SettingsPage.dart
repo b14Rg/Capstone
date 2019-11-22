@@ -1,3 +1,4 @@
+import 'package:capstone_application/pages/WelcomePage.dart';
 import 'package:flutter/material.dart';
 
 class SettingsPage extends StatefulWidget {
@@ -60,6 +61,24 @@ class _SettingsState extends State<SettingsPage> {
             height: 75,
             child: Center(
               child: Text('************'),
+            ),
+          ),
+          Divider(),
+          Container(
+            height: 75,
+            child: Center(
+              child: FloatingActionButton(
+                heroTag: 0,
+                child: Text('Sign out'),
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => WelcomePage(),
+                    )
+                  );
+                },
+              ),
             ),
           ),
           Divider(),

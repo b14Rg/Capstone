@@ -3,6 +3,7 @@ package johnson.sean.capstoneapi.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -11,8 +12,10 @@ public class Expense {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+    @Column(nullable = false)
+    private String title;
     @OneToMany(mappedBy = "expense")
-    private List<Item> items;
+    private List<Item> items = new ArrayList<>();
     @Column(nullable = false)
     private float total;
 
@@ -27,6 +30,14 @@ public class Expense {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public List<Item> getItems() {

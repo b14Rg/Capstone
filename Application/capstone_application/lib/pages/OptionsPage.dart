@@ -1,9 +1,12 @@
+import 'package:capstone_application/pages/ApiDemoPage.dart';
 import 'package:capstone_application/pages/BudgetPage.dart';
 import 'package:capstone_application/pages/ExpensesPage.dart';
 import 'package:capstone_application/pages/IncomePage.dart';
 import 'package:capstone_application/pages/SettingsPage.dart';
 import 'package:capstone_application/pages/SummaryPage.dart';
 import 'package:flutter/material.dart';
+
+
 
 class OptionsPage extends StatefulWidget {
   @override
@@ -27,9 +30,10 @@ class _OptionsState extends State<OptionsPage> {
       ),
       body: ListView (
         padding: const EdgeInsets.all(25.0),
+        scrollDirection: Axis.vertical,
         children: <Widget>[
           Container(
-            height: 150,
+            height: 40,
             child:  new FloatingActionButton.extended(
               heroTag: 1,
               label: Text('Summaries'),
@@ -45,7 +49,7 @@ class _OptionsState extends State<OptionsPage> {
           ),
           Divider(),
           Container(
-            height: 150,
+            height: 40,
             child: new FloatingActionButton.extended(
               heroTag: 2,
               label: Text('Budgets'),
@@ -61,7 +65,7 @@ class _OptionsState extends State<OptionsPage> {
           ),
           Divider(),
           Container(
-            height: 150,
+            height: 40,
             child: new FloatingActionButton.extended(
               heroTag: 3,
               label: Text('Income'),
@@ -77,7 +81,7 @@ class _OptionsState extends State<OptionsPage> {
           ),
           Divider(),
           Container(
-            height: 150,
+            height: 40,
             child: new FloatingActionButton.extended(
               heroTag: 4,
               label: Text('Expenses'),
@@ -93,7 +97,7 @@ class _OptionsState extends State<OptionsPage> {
           ),
           Divider(),
           Container(
-            height: 150,
+            height: 40,
             child: new FloatingActionButton.extended(
               heroTag: 5,
               label: Text('Settings'),
@@ -107,8 +111,25 @@ class _OptionsState extends State<OptionsPage> {
               },
             ),
           ),
+          Divider(),
+          Container(
+            height: 40,
+            child: new FloatingActionButton.extended(
+              heroTag: 6,
+              label: Text('API request Demo'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => new ApiDemoPage(),
+                  )
+                );
+              },
+            ),
+          ),
         ],
       )
     );
   }
+  
 }

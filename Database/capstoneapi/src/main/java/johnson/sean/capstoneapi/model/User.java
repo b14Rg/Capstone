@@ -11,19 +11,15 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     @Column(nullable = false)
-    private String name;
-    @Column(nullable = false)
     private String email;
-    @OneToOne
-    private Credentials credentials;
     @OneToMany(mappedBy = "user")
     private List<Expense> expenses = new ArrayList<>();
     @OneToOne
     private Income income;
     @OneToOne
     private Budget budget;
-    @OneToMany(mappedBy = "user")
-    private List<Bill> bills = new ArrayList<>();
+//    @OneToMany(mappedBy = "user")
+//    private List<Bill> bills = new ArrayList<>();
 
     public int getId() {
         return id;
@@ -33,28 +29,12 @@ public class User {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public Credentials getCredentials() {
-        return credentials;
-    }
-
-    public void setCredentials(Credentials credentials) {
-        this.credentials = credentials;
     }
 
     public List<Expense> getExpenses() {
@@ -81,13 +61,13 @@ public class User {
         this.budget = budget;
     }
 
-    public List<Bill> getBills() {
-        return bills;
-    }
-
-    public void setBills(List<Bill> bills) {
-        this.bills = bills;
-    }
+//    public List<Bill> getBills() {
+//        return bills;
+//    }
+//
+//    public void setBills(List<Bill> bills) {
+//        this.bills = bills;
+//    }
 
     public void copy(User user){
         this.setIncome(user.getIncome());

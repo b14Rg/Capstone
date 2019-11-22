@@ -5,6 +5,7 @@ import johnson.sean.capstoneapi.model.Expense;
 import johnson.sean.capstoneapi.model.Item;
 import johnson.sean.capstoneapi.model.User;
 import johnson.sean.capstoneapi.model.repositories.ExpensesJpaRepository;
+import johnson.sean.capstoneapi.model.repositories.ItemJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,6 +18,8 @@ import java.util.Map;
 public class ExpenseRestController {
     @Autowired
     private ExpensesJpaRepository expenseRepo;
+    @Autowired
+    private ItemJpaRepository itemRepo;
     @Autowired
     private UserRestController userController;
 
@@ -42,6 +45,10 @@ public class ExpenseRestController {
     @RequestMapping(path = "/{expenseId}", method = RequestMethod.DELETE)
     @Transactional
     public void deleteExpense(@PathVariable int expenseId) {
+        Expense expense = getById(expenseId);
+        for(Item item : expense.getItems()){
+            itemRepo.deleteById(item.getId());
+        }
         expenseRepo.deleteById(expenseId);
     }
 

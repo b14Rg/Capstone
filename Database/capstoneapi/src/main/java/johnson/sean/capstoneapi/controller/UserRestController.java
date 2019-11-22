@@ -9,7 +9,6 @@ import johnson.sean.capstoneapi.model.repositories.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Map;
@@ -18,26 +17,17 @@ import java.util.Map;
 @RequestMapping("/users")
 public class UserRestController {
     @Autowired
-    private AuthenticationEngine authenticate;
-    @Autowired
     private UserJpaRepository userRepo;
-    @Autowired
-    private CredentialsJpaRepository credentialsReop;
     @Autowired
     private ExpensesJpaRepository expensesRepo;
     @Autowired
     private IncomeJpaRepository incomeRepo;
     @Autowired
     private BudgetJpaRepository budgetRepo;
-    @Autowired
-    private BillJpaRepository billRepo;
 
     @RequestMapping(path = "", method = RequestMethod.POST)
     @Transactional
-    public Integer createUser(@RequestBody User user, HttpServletRequest request) {
-//        String header = request.getHeader("Authorization");
-//        authenticate.auth(header);
-        credentialsReop.saveAndFlush(user.getCredentials());
+    public Integer createUser(@RequestBody User user) {
         incomeRepo.saveAndFlush(user.getIncome());
         budgetRepo.saveAndFlush(user.getBudget());
         userRepo.saveAndFlush((user));
@@ -54,12 +44,19 @@ public class UserRestController {
         return userRepo.findById(userId).orElseThrow(() -> new NoSuchEntityException(userId, User.class));
     }
 
+    @RequestMapping(path = "?email={user_email}", method = RequestMethod.GET)
+    public User getByEmail(@PathVariable String user_email) {
+        return userRepo.findByEmail(user_email);
+    }
+
     @RequestMapping(path = "/{userId}", method = RequestMethod.DELETE)
     @Transactional
     public void deleteUser(@PathVariable int userId) {
         User user = getById(userId);
+        for(Expense expense : user.getExpenses()){
+            expensesRepo.deleteById(expense.getId());
+        }
         userRepo.deleteById(user.getId());
-        credentialsReop.deleteById(user.getCredentials().getId());
         incomeRepo.deleteById(user.getIncome().getId());
         budgetRepo.deleteById(user.getBudget().getId());
 

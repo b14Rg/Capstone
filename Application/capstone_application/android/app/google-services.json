@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "16489735635",
+    "firebase_url": "https://capstone-authentication.firebaseio.com",
+    "project_id": "capstone-authentication",
+    "storage_bucket": "capstone-authentication.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:16489735635:android:d573f500592ee7e9bdbb26",
+        "android_client_info": {
+          "package_name": "com.example.capstone_application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "16489735635-qpvlvdapm5p7s6teet2s577dj4shrqq9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJsT3S-3Pzp2h3d6dp2hlOqnMznuVq6cw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "16489735635-qpvlvdapm5p7s6teet2s577dj4shrqq9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.transaction.Transactional;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -24,6 +25,8 @@ public class ItemRestController {
     public Integer createItem(@PathVariable int expenseId, @RequestBody Item item) {
         Expense expense = expenseController.getById(expenseId);
         item.setExpense(expense);
+        expense.setTotal(expense.getTotal() + item.getCost());
+        expenseController.updateExpense(expense.getId(), expense);
         itemRepo.saveAndFlush(item);
         return item.getId();
     }
@@ -41,6 +44,10 @@ public class ItemRestController {
     @RequestMapping(path = "/{itemId}", method = RequestMethod.DELETE)
     @Transactional
     public void deleteItem(@PathVariable int itemId) {
+        Item item = getById(itemId);
+        Expense expense = expenseController.getById(item.getExpense().getId());
+        expense.setTotal(expense.getTotal() - item.getCost());
+        expenseController.updateExpense(expense.getId(), expense);
         itemRepo.deleteById(itemId);
     }
 

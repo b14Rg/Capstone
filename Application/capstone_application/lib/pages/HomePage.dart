@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => new OptionsPage(),
+                builder: (context) => OptionsPage(),
               )
             );
           },
@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage> {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => new AddExpensePage(),
+              builder: (context) => AddExpensePage(),
             )
           );
         },
