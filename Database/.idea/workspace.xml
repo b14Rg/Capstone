@@ -2,64 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fd26abf-bd1e-4774-b013-ba249e88e322" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Application/capstone_application/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/capstone_application/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Application/capstone_application/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/capstone_application/android/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Application/capstone_application/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/capstone_application/android/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Application/capstone_application/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/capstone_application/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/capstone_application/lib/models/budget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/capstone_application/lib/models/budget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/capstone_application/lib/models/credentials.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/capstone_application/lib/models/income.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/capstone_application/lib/models/income.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/capstone_application/lib/models/user.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/capstone_application/lib/models/user.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/ApiDemoPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/ApiDemoPage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/HomePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/HomePage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/LoginPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/LoginPage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/OptionsPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/OptionsPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/RegisterPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/RegisterPage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/SettingsPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/SettingsPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Application/capstone_application/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/capstone_application/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Application/capstone_application/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/capstone_application/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/WelcomePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/WelcomePage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/configuration/CapstoneApiConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/configuration/CapstoneApiConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/controller/AuthenticationEngine.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/controller/BillRestController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/controller/ExpenseRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/controller/ExpenseRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/controller/ItemRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/controller/ItemRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/controller/ItemRestController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/controller/UserRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/controller/UserRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/Bill.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/Budget.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/Budget.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/Credentials.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/Expense.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/Expense.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/Income.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/Income.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/Item.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/repositories/BillJpaRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/repositories/CredentialsJpaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/repositories/ItemJpaRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/repositories/UserJpaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/repositories/UserJpaRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/capstoneapi/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/src/main/resources/auth_file.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/capstoneapi/target/capstone.war" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/capstone.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/capstone/WEB-INF/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/capstone/WEB-INF/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/capstone/WEB-INF/classes/johnson/sean/capstoneapi/configuration/CapstoneApiConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/capstone/WEB-INF/classes/johnson/sean/capstoneapi/configuration/CapstoneApiConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/capstone/WEB-INF/classes/johnson/sean/capstoneapi/controller/AuthenticationEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/capstone/WEB-INF/classes/johnson/sean/capstoneapi/controller/AuthenticationEngine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/capstone/WEB-INF/classes/johnson/sean/capstoneapi/controller/BillRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/capstone/WEB-INF/classes/johnson/sean/capstoneapi/controller/BillRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/capstone/WEB-INF/classes/johnson/sean/capstoneapi/controller/ExpenseRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/capstone/WEB-INF/classes/johnson/sean/capstoneapi/controller/ExpenseRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/capstone/WEB-INF/classes/johnson/sean/capstoneapi/controller/ItemRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/capstone/WEB-INF/classes/johnson/sean/capstoneapi/controller/ItemRestController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/capstoneapi/target/capstone/WEB-INF/classes/johnson/sean/capstoneapi/controller/UserRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/capstone/WEB-INF/classes/johnson/sean/capstoneapi/controller/UserRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/capstone/WEB-INF/classes/johnson/sean/capstoneapi/model/Budget.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/capstone/WEB-INF/classes/johnson/sean/capstoneapi/model/Budget.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/capstone/WEB-INF/classes/johnson/sean/capstoneapi/model/Expense.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/capstone/WEB-INF/classes/johnson/sean/capstoneapi/model/Expense.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/capstone/WEB-INF/classes/johnson/sean/capstoneapi/model/Income.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/capstone/WEB-INF/classes/johnson/sean/capstoneapi/model/Income.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/capstone/WEB-INF/classes/johnson/sean/capstoneapi/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/capstone/WEB-INF/classes/johnson/sean/capstoneapi/model/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/capstoneapi/target/capstone/WEB-INF/classes/johnson/sean/capstoneapi/model/repositories/UserJpaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/capstone/WEB-INF/classes/johnson/sean/capstoneapi/model/repositories/UserJpaRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/configuration/CapstoneApiConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/configuration/CapstoneApiConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/controller/AuthenticationEngine.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/controller/BillRestController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/controller/ExpenseRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/controller/ExpenseRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/controller/ItemRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/controller/ItemRestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/controller/ItemRestController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/controller/UserRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/controller/UserRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/model/Bill.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/model/Budget.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/model/Budget.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/model/Credentials.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/model/Expense.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/model/Expense.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/model/Income.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/model/Income.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/model/Item.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/model/repositories/BillJpaRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/model/repositories/CredentialsJpaRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/model/repositories/ItemJpaRepository.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/model/repositories/UserJpaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/model/repositories/UserJpaRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -116,7 +90,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.CapstoneApi">
+  <component name="RunManager" selected="Google App Engine Deployment.Google App Engine Deployment">
     <configuration name="CapstoneApi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="johnson.sean.capstoneapi.CapstoneApi" />
       <module name="capstoneapi" />
@@ -198,5 +172,10 @@
     <MESSAGE value="Fixed deleting a user also deletes the connected tables&#10;credentials&#10;income&#10;budget" />
     <MESSAGE value="Deployed to google app engine&#10;Connects to google cloud sql and hosts api via localhost" />
     <option name="LAST_COMMIT_MESSAGE" value="Deployed to google app engine&#10;Connects to google cloud sql and hosts api via localhost" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Database$CapstoneApi.ic" NAME="CapstoneApi Coverage Results" MODIFIED="1574730959442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>johnson.sean.capstoneapi.*</FILTER>
+    </SUITE>
   </component>
 </project>

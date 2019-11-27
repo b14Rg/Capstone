@@ -1,11 +1,21 @@
+import 'package:capstone_application/models/budget.dart';
 import 'package:flutter/material.dart';
 
 class BudgetPage extends StatefulWidget {
+  final Budget userBudget;
+
+  BudgetPage({Key key, @required this.userBudget}) : super(key: key);
+
   @override
-  _BudgetState createState() => _BudgetState();
+  _BudgetState createState() => _BudgetState(userBudget);
 }
 
 class _BudgetState extends State<BudgetPage> {
+  Budget _budget;
+
+  _BudgetState(this._budget);
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +45,7 @@ class _BudgetState extends State<BudgetPage> {
           Container(
             height: 75,
             child: Center(
-              child: Text('\$00.00'),
+              child: Text('\$${_budget.daily}'),
             ),
           ),
           Divider(),

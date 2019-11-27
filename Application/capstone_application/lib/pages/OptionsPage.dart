@@ -1,19 +1,28 @@
+import 'package:capstone_application/models/user.dart';
 import 'package:capstone_application/pages/ApiDemoPage.dart';
 import 'package:capstone_application/pages/BudgetPage.dart';
 import 'package:capstone_application/pages/ExpensesPage.dart';
 import 'package:capstone_application/pages/IncomePage.dart';
 import 'package:capstone_application/pages/SettingsPage.dart';
-import 'package:capstone_application/pages/SummaryPage.dart';
+import 'package:capstone_application/pages/WelcomePage.dart';
 import 'package:flutter/material.dart';
 
 
 
 class OptionsPage extends StatefulWidget {
+  final User user;
+
+  OptionsPage({Key key, @required this.user}) : super(key: key);
+
   @override
-  _OptionsState createState() => _OptionsState();
+  _OptionsState createState() => _OptionsState(user);
 }
 
 class _OptionsState extends State<OptionsPage> {
+  User _user;
+
+  _OptionsState(this._user);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,31 +42,15 @@ class _OptionsState extends State<OptionsPage> {
         scrollDirection: Axis.vertical,
         children: <Widget>[
           Container(
-            height: 40,
-            child:  new FloatingActionButton.extended(
-              heroTag: 1,
-              label: Text('Summaries'),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => new SummaryPage(),
-                  )
-                );
-              },
-            ),
-          ),
-          Divider(),
-          Container(
-            height: 40,
-            child: new FloatingActionButton.extended(
+            height: 80,
+            child: FloatingActionButton.extended(
               heroTag: 2,
               label: Text('Budgets'),
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => new BudgetPage(),
+                    builder: (context) => BudgetPage(userBudget: _user.budget),
                   )
                 );
               },
@@ -65,15 +58,15 @@ class _OptionsState extends State<OptionsPage> {
           ),
           Divider(),
           Container(
-            height: 40,
-            child: new FloatingActionButton.extended(
+            height: 80,
+            child: FloatingActionButton.extended(
               heroTag: 3,
               label: Text('Income'),
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => new IncomePage(),
+                    builder: (context) => IncomePage(userIncome: _user.income),
                   )
                 );
               },
@@ -81,15 +74,15 @@ class _OptionsState extends State<OptionsPage> {
           ),
           Divider(),
           Container(
-            height: 40,
-            child: new FloatingActionButton.extended(
+            height: 80,
+            child: FloatingActionButton.extended(
               heroTag: 4,
               label: Text('Expenses'),
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => new ExpensesPage(),
+                    builder: (context) => ExpensesPage(userExpenses: _user.expenses),
                   )
                 );
               },
@@ -97,15 +90,15 @@ class _OptionsState extends State<OptionsPage> {
           ),
           Divider(),
           Container(
-            height: 40,
-            child: new FloatingActionButton.extended(
+            height: 80,
+            child: FloatingActionButton.extended(
               heroTag: 5,
               label: Text('Settings'),
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => new SettingsPage(),
+                    builder: (context) => SettingsPage(user: _user),
                   )
                 );
               },
@@ -113,22 +106,37 @@ class _OptionsState extends State<OptionsPage> {
           ),
           Divider(),
           Container(
-            height: 40,
-            child: new FloatingActionButton.extended(
+            height: 80,
+            child: FloatingActionButton.extended(
               heroTag: 6,
               label: Text('API request Demo'),
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => new ApiDemoPage(),
+                    builder: (context) => ApiDemoPage(),
                   )
                 );
               },
             ),
           ),
         ],
-      )
+      ),
+      bottomNavigationBar: BottomAppBar(
+        child: FloatingActionButton.extended(
+          heroTag: 7,
+          elevation: 0,
+          label: Text('Sign out'),
+          onPressed: () {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+                builder: (context) => WelcomePage(),
+              )
+            );
+          },
+        ),
+      ),
     );
   }
   

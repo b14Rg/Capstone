@@ -1,12 +1,18 @@
-import 'package:capstone_application/pages/WelcomePage.dart';
+import 'package:capstone_application/models/user.dart';
 import 'package:flutter/material.dart';
 
 class SettingsPage extends StatefulWidget {
+  final User user;
+
+  SettingsPage({Key key, @required this.user}) : super(key: key);
   @override
-  _SettingsState createState() => _SettingsState();
+  _SettingsState createState() => _SettingsState(user);
 }
 
 class _SettingsState extends State<SettingsPage> {
+  User _user;
+
+  _SettingsState(this._user);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +32,7 @@ class _SettingsState extends State<SettingsPage> {
             ),
             child: Center(
               child: Text(
-                'Username',
+                'Email',
                 style: TextStyle(
                   color: Colors.white,
                 ),
@@ -36,52 +42,34 @@ class _SettingsState extends State<SettingsPage> {
           Container(
             height: 75,
             child: Center(
-              child: Text('Test User'),
+              child: Text('${_user.email}'),
             ),
           ),
           Divider(),
-          Container(
-            height: 75,
-            decoration: BoxDecoration(
-              color: Colors.blue,
-              borderRadius: BorderRadius.all(
-                Radius.circular(20.0),
-              ),
-            ),
-            child: Center(
-              child: Text(
-                'Password',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-            ),
-          ),
-          Container(
-            height: 75,
-            child: Center(
-              child: Text('************'),
-            ),
-          ),
-          Divider(),
-          Container(
-            height: 75,
-            child: Center(
-              child: FloatingActionButton(
-                heroTag: 0,
-                child: Text('Sign out'),
-                onPressed: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => WelcomePage(),
-                    )
-                  );
-                },
-              ),
-            ),
-          ),
-          Divider(),
+          // Container(
+          //   height: 75,
+          //   decoration: BoxDecoration(
+          //     color: Colors.blue,
+          //     borderRadius: BorderRadius.all(
+          //       Radius.circular(20.0),
+          //     ),
+          //   ),
+          //   child: Center(
+          //     child: Text(
+          //       'Password',
+          //       style: TextStyle(
+          //         color: Colors.white,
+          //       ),
+          //     ),
+          //   ),
+          // ),
+          // Container(
+          //   height: 75,
+          //   child: Center(
+          //     child: Text(''),
+          //   ),
+          // ),
+          // Divider(),
         ],
       ),
     );

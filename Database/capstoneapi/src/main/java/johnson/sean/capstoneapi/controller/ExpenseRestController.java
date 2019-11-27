@@ -2,10 +2,8 @@ package johnson.sean.capstoneapi.controller;
 
 import johnson.sean.capstoneapi.exception.NoSuchEntityException;
 import johnson.sean.capstoneapi.model.Expense;
-import johnson.sean.capstoneapi.model.Item;
 import johnson.sean.capstoneapi.model.User;
 import johnson.sean.capstoneapi.model.repositories.ExpensesJpaRepository;
-import johnson.sean.capstoneapi.model.repositories.ItemJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,8 +16,6 @@ import java.util.Map;
 public class ExpenseRestController {
     @Autowired
     private ExpensesJpaRepository expenseRepo;
-    @Autowired
-    private ItemJpaRepository itemRepo;
     @Autowired
     private UserRestController userController;
 
@@ -46,9 +42,6 @@ public class ExpenseRestController {
     @Transactional
     public void deleteExpense(@PathVariable int expenseId) {
         Expense expense = getById(expenseId);
-        for(Item item : expense.getItems()){
-            itemRepo.deleteById(item.getId());
-        }
         expenseRepo.deleteById(expenseId);
     }
 
@@ -64,7 +57,7 @@ public class ExpenseRestController {
     @Transactional
     public void updateExpenseProperties(@PathVariable int expenseId, @RequestBody Map<String, Object> newValues) {
         Expense existingExpense = getById(expenseId);
-        existingExpense.setItems((List<Item>)newValues.get("items"));
+        existingExpense.setTitle((String)newValues.get("title"));
         existingExpense.setTotal((float)newValues.get("total"));
     }
 }

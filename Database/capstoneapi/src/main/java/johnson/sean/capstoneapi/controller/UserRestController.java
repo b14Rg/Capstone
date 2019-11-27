@@ -39,14 +39,10 @@ public class UserRestController {
         return userRepo.findAll();
     }
 
+
     @RequestMapping(path = "/{userId}", method = RequestMethod.GET)
     public User getById(@PathVariable int userId) {
         return userRepo.findById(userId).orElseThrow(() -> new NoSuchEntityException(userId, User.class));
-    }
-
-    @RequestMapping(path = "?email={user_email}", method = RequestMethod.GET)
-    public User getByEmail(@PathVariable String user_email) {
-        return userRepo.findByEmail(user_email);
     }
 
     @RequestMapping(path = "/{userId}", method = RequestMethod.DELETE)
@@ -77,5 +73,10 @@ public class UserRestController {
         existingUser.setIncome((Income) newValues.get("income"));
         existingUser.setBudget((Budget) newValues.get("budget"));
         userRepo.saveAndFlush(existingUser);
+    }
+
+    @RequestMapping(path = "/searchByEmail", method = RequestMethod.GET)
+    public User searchUserByEmail(@RequestParam(name = "email", required = true) String searchEmail) {
+        return userRepo.findByEmail(searchEmail);
     }
 }

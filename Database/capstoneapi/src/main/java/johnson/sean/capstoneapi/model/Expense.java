@@ -14,8 +14,6 @@ public class Expense {
     private int id;
     @Column(nullable = false)
     private String title;
-    @OneToMany(mappedBy = "expense")
-    private List<Item> items = new ArrayList<>();
     @Column(nullable = false)
     private float total;
 
@@ -40,14 +38,6 @@ public class Expense {
         this.title = title;
     }
 
-    public List<Item> getItems() {
-        return items;
-    }
-
-    public void setItems(List<Item> items) {
-        this.items = items;
-    }
-
     public float getTotal() {
         return total;
     }
@@ -65,7 +55,7 @@ public class Expense {
     }
 
     public void copy(Expense expense) {
-        this.setItems(expense.getItems());
+        this.setTitle(expense.getTitle());
         this.setTotal(expense.getTotal());
     }
 }

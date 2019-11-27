@@ -18,8 +18,6 @@ public class User {
     private Income income;
     @OneToOne
     private Budget budget;
-//    @OneToMany(mappedBy = "user")
-//    private List<Bill> bills = new ArrayList<>();
 
     public int getId() {
         return id;
@@ -60,14 +58,6 @@ public class User {
     public void setBudget(Budget budget) {
         this.budget = budget;
     }
-
-//    public List<Bill> getBills() {
-//        return bills;
-//    }
-//
-//    public void setBills(List<Bill> bills) {
-//        this.bills = bills;
-//    }
 
     public void copy(User user){
         this.setIncome(user.getIncome());

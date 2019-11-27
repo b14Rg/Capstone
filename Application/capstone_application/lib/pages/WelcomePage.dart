@@ -36,19 +36,18 @@ class _WelcomeState extends State<WelcomePage> {
         title: Text('Welcome'),
       ),
       body: Center(
-        child: Column(
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            FloatingActionButton(
+            FloatingActionButton.extended(
               heroTag: 0,
               onPressed: navigateSignIn,
-              child: Text('Sign in'),
+              label: Text('Sign in'),
             ),
-            FloatingActionButton(
+            FloatingActionButton.extended(
               heroTag: 1,
               onPressed: navigateSignUp,
-              child: Text('Sign up'),
+              label: Text('Sign up'),
             ),
           ],
         ),

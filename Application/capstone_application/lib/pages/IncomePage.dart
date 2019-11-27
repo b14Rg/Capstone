@@ -1,11 +1,20 @@
+import 'package:capstone_application/models/income.dart';
 import 'package:flutter/material.dart';
 
 class IncomePage extends StatefulWidget {
+  final Income userIncome;
+
+  IncomePage({Key key, @required this.userIncome}) : super(key: key);
+
   @override
-  _IncomeState createState() => _IncomeState();
+  _IncomeState createState() => _IncomeState(userIncome);
 }
 
 class _IncomeState extends State<IncomePage> {
+  Income _income;
+
+  _IncomeState(this._income);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold (
@@ -35,7 +44,7 @@ class _IncomeState extends State<IncomePage> {
           Container(
             height: 75,
             child: Center(
-              child: Text('\$00.00'),
+              child: Text('\$${_income.daily}'),
             ),
           ),
           Divider(),

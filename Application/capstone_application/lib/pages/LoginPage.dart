@@ -18,10 +18,10 @@ class _LoginState extends State<LoginPage> {
         formState.save();
         try{
           await FirebaseAuth.instance.signInWithEmailAndPassword(email: _email, password: _password);
-          Navigator.push(
+          Navigator.pushReplacement(
             context, 
             MaterialPageRoute(
-              builder: (context) => HomePage(),
+              builder: (context) => new HomePage(email: _email,),
           ));
         }catch(e) {
           print(e.message);

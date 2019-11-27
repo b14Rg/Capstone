@@ -1,4 +1,4 @@
-import 'package:capstone_application/models/user.dart';
+import 'package:capstone_application/models/usersList.dart';
 import 'package:flutter/material.dart';
 
 import 'package:http/http.dart' as http;
@@ -10,21 +10,21 @@ class ApiDemoPage extends StatefulWidget {
 }
 
 class _ApiDemoState extends State<ApiDemoPage> {
-  Future<User> user;
+  Future<UserList> users;
 
   @override
   void initState() {
     super.initState();
-    user = _getApiData();
+    users = _getApiData();
   }
 
-  Future<User> _getApiData() async{
-    final response = await http.get('https://capstone-dot-sylvan-mode-251308.appspot.com/users/4');
+  Future<UserList> _getApiData() async{
+    final response = await http.get('https://capstone-dot-sylvan-mode-251308.appspot.com/users');
 
     if(response.statusCode == 200) {
-      return User.fromJson(json.decode(response.body));
+      return UserList.fromJson(json.decode(response.body));
     } else {
-      throw Exception('Failed to get user');
+      throw Exception('Failed to get users');
     }
   }
 
@@ -40,21 +40,33 @@ class _ApiDemoState extends State<ApiDemoPage> {
             Navigator.pop(context);
           },
         ),
-        title: Text('Calling api for one user'),
+        title: Text('Calling api for first user'),
       ),
       body: Center(
-        child: FutureBuilder<User>(
-          future: user,
+        child: FutureBuilder<UserList>(
+          future: users,
           builder: (context, snapshot) {
-            if(snapshot.hasData) {
+            if(snapshot.connectionState == ConnectionState.done) {
               return Column(
                 children: <Widget>[
-                  Text(snapshot.data.id.toString()),
+                  Text(snapshot.data.users[0].id.toString()),
                   Divider(),
-                  Text(snapshot.data.name.toString()),
+                  Text(snapshot.data.users[0].email.toString()),
                   Divider(),
-                  Text(snapshot.data.email.toString()),
+                  Text(snapshot.data.users[0].income.id.toString()),
                   Divider(),
+                  Text(snapshot.data.users[0].income.daily.toString()),
+                  Divider(),
+                  Text(snapshot.data.users[0].budget.id.toString()),
+                  Divider(),
+                  Text(snapshot.data.users[0].budget.daily.toString()),
+                  Divider(),
+                  Text(snapshot.data.users[0].expenses[0].id.toString()),
+                  Divider(),
+                  Text(snapshot.data.users[0].expenses[0].title.toString()),
+                  Divider(),
+                  Text(snapshot.data.users[0].expenses[0].total.toString()),
+                  Divider()
                 ],
               );
             } else if (snapshot.error) {

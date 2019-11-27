@@ -2,13 +2,10 @@ johnson\sean\capstoneapi\controller\ExpenseRestController.class
 johnson\sean\capstoneapi\CapstoneApi.class
 johnson\sean\capstoneapi\model\Budget.class
 johnson\sean\capstoneapi\model\Expense.class
-johnson\sean\capstoneapi\model\repositories\ItemJpaRepository.class
 johnson\sean\capstoneapi\model\repositories\IncomeJpaRepository.class
-johnson\sean\capstoneapi\controller\ItemRestController.class
 johnson\sean\capstoneapi\model\repositories\ExpensesJpaRepository.class
 johnson\sean\capstoneapi\model\User.class
 johnson\sean\capstoneapi\model\repositories\BudgetJpaRepository.class
-johnson\sean\capstoneapi\model\Item.class
 johnson\sean\capstoneapi\exception\ExceptionHandlerConfiguration.class
 johnson\sean\capstoneapi\model\repositories\UserJpaRepository.class
 johnson\sean\capstoneapi\exception\NoSuchEntityException.class
