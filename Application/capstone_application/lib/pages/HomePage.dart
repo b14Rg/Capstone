@@ -26,17 +26,16 @@ class _HomePageState extends State<HomePage> {
     super.initState();
   }
 
-  void _updateUser() async{
+  void _updateUser() async {
     user = getUserInfo();
   }
 
-  Future<User> getUserInfo() async{
+  Future<User> getUserInfo() async {
     print(email);
     final response = await http.get(
-      'https://capstone-dot-sylvan-mode-251308.appspot.com/users/searchByEmail?email=$email'
-    );
+        'https://capstone-dot-sylvan-mode-251308.appspot.com/users/searchByEmail?email=$email');
 
-    if(response.statusCode == 200) {
+    if (response.statusCode == 200) {
       return User.fromJson(json.decode(response.body));
     } else {
       throw Exception('Failed to get user with email: $email');
@@ -51,41 +50,49 @@ class _HomePageState extends State<HomePage> {
         leading: FutureBuilder<User>(
           future: user,
           builder: (context, snapshot) {
-            if(snapshot.connectionState == ConnectionState.done) {
+            if (snapshot.connectionState == ConnectionState.done) {
               return FloatingActionButton(
                 heroTag: 0,
                 elevation: 0,
                 child: const Icon(Icons.list),
                 onPressed: () {
                   Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => OptionsPage(user: snapshot.data),
-                    )
-                  );
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => OptionsPage(user: snapshot.data),
+                      ));
                 },
               );
-            } else if(snapshot.error) {
+            } else if (snapshot.error) {
               return Text('${snapshot.error}');
             }
             return CircularProgressIndicator();
           },
         ),
         title: Text('Home page'),
-        
       ),
       body: Center(
         child: FutureBuilder<User>(
           future: user,
           builder: (context, snapshot) {
-            if(snapshot.connectionState == ConnectionState.done) {
+            if (snapshot.connectionState == ConnectionState.done) {
               balance = snapshot.data.income.daily;
-              if(snapshot.data.expenses != null) {
-                for(var expense in snapshot.data.expenses) {
+              if (snapshot.data.expenses != null) {
+                for (var expense in snapshot.data.expenses) {
                   balance = balance - expense.total;
                 }
+                balance.toStringAsFixed(2);
               }
-              if(balance >= snapshot.data.budget.daily) {
+              if (balance < snapshot.data.income.daily) {
+                return Text(
+                  '\$$balance',
+                  style: TextStyle(
+                    fontSize: 70,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.red,
+                  ),
+                );
+              } else if (balance >= snapshot.data.budget.daily) {
                 return Text(
                   '+\$$balance',
                   style: TextStyle(
@@ -100,11 +107,11 @@ class _HomePageState extends State<HomePage> {
                   style: TextStyle(
                     fontSize: 70,
                     fontWeight: FontWeight.bold,
-                    color: Colors.red,
+                    color: Colors.amber,
                   ),
                 );
               }
-            } else if(snapshot.error) {
+            } else if (snapshot.error) {
               return Text('${snapshot.error}');
             }
             return CircularProgressIndicator();
@@ -115,21 +122,21 @@ class _HomePageState extends State<HomePage> {
         child: FutureBuilder<User>(
           future: user,
           builder: (context, snapshot) {
-            if(snapshot.connectionState == ConnectionState.done) {
+            if (snapshot.connectionState == ConnectionState.done) {
               return FloatingActionButton.extended(
                 heroTag: 1,
                 elevation: 0,
                 label: Text('Add Expense'),
                 onPressed: () {
                   Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => AddExpensePage(userId: snapshot.data.id),
-                    )
-                  );
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            AddExpensePage(userId: snapshot.data.id),
+                      ));
                 },
               );
-            } else if(snapshot.error) {
+            } else if (snapshot.error) {
               return Text('${snapshot.error}');
             }
             return CircularProgressIndicator();

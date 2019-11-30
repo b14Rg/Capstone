@@ -27,17 +27,24 @@ class _ExpensesState extends State<ExpensesPage> {
   Widget _buildExpenses() {
     return ListView.builder(
       padding: const EdgeInsets.all(15.0),
+      itemCount: _expenses.length,
       itemBuilder: (context, i) {
-        if(i < _expenses.length) {
+        if (i < _expenses.length) {
           return _buildExpense(_expenses[i]);
         }
+        return CircularProgressIndicator();
       },
     );
   }
 
   Widget _buildExpense(Expense expense) {
     return new ListTile(
-      title: Text(expense.title + '\t\t${expense.total}'),
+      title: Text(
+        expense.title + '\t\t${expense.total.toStringAsFixed(2)}',
+        style: TextStyle(
+          color: Colors.white,
+        ),
+      ),
     );
   }
 }

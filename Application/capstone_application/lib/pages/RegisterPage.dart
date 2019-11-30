@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:capstone_application/helpers/DecimalTextInputFormatter.dart';
+import 'package:capstone_application/helpers/FormValidators.dart';
 import 'package:capstone_application/models/budget.dart';
 import 'package:capstone_application/models/expense.dart';
 import 'package:capstone_application/models/income.dart';
@@ -20,23 +21,29 @@ class RegisterPage extends StatefulWidget {
 
 class _RegisterState extends State<RegisterPage> {
   String _email, _password, _income, _budget;
+  bool _autoValidate = false;
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   Future<void> register() async {
     final formState = _formKey.currentState;
-    if(formState.validate()) {
+    if (formState.validate()) {
       formState.save();
-      try{
-        await FirebaseAuth.instance.createUserWithEmailAndPassword(email: _email, password: _password);
+      try {
+        await FirebaseAuth.instance
+            .createUserWithEmailAndPassword(email: _email, password: _password);
         await _saveUser(_createUser(_email, _income, _budget));
         Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) => WelcomePage(),
-          ));
-      }catch(e) {
+            context,
+            MaterialPageRoute(
+              builder: (context) => WelcomePage(),
+            ));
+      } catch (e) {
         print(e.message);
       }
+    } else {
+      setState(() {
+        _autoValidate = true;
+      });
     }
   }
 
@@ -46,29 +53,19 @@ class _RegisterState extends State<RegisterPage> {
     assert(parseIncome is double);
     assert(parseBudget is double);
     User user = new User(
-      id: 0,
-      email: email,
-      expenses: new List<Expense>(),
-      income: new Income(
         id: 0,
-        daily: parseIncome
-      ),
-      budget: new Budget(
-        id: 0,
-        daily: parseBudget
-      )
-    );
+        email: email,
+        expenses: new List<Expense>(),
+        income: new Income(id: 0, daily: parseIncome),
+        budget: new Budget(id: 0, daily: parseBudget));
     return user;
   }
 
   Future<http.Response> _saveUser(User user) async {
     final response = await http.post(
-      'https://capstone-dot-sylvan-mode-251308.appspot.com/users',
-      headers: {
-        HttpHeaders.contentTypeHeader: 'application/json'
-      },
-      body: json.encode(user.toJson())
-    );
+        'https://capstone-dot-sylvan-mode-251308.appspot.com/users',
+        headers: {HttpHeaders.contentTypeHeader: 'application/json'},
+        body: json.encode(user.toJson()));
     return response;
   }
 
@@ -80,66 +77,82 @@ class _RegisterState extends State<RegisterPage> {
       ),
       body: Form(
         key: _formKey,
-        child: Column(
-          children: <Widget>[
-            TextFormField(
-              validator: (email_input) {
-                if(email_input.isEmpty) {
-                  return 'Please enter an email';
-                }
-              },
-              onSaved: (emailInput) => _email = emailInput,
-              decoration: InputDecoration(
-                labelText: 'Email'
+        autovalidate: _autoValidate,
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              TextFormField(
+                validator: validateEmail,
+                onSaved: (input) => _email = input,
+                textAlign: TextAlign.center,
+                decoration: InputDecoration(
+                  labelText: 'Email',
+                  labelStyle: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                style: TextStyle(
+                  color: Colors.green,
+                ),
               ),
-            ),
-            TextFormField(
-              validator: (password_input) {
-                if(password_input.length < 4) {
-                  return 'Your pass word needs at least 6 characters';
-                }
-              },
-              onSaved: (passwordInput) => _password = passwordInput,
-              decoration: InputDecoration(
-                labelText: 'Password'
+              TextFormField(
+                validator: validatePassword,
+                onSaved: (input) => _password = input,
+                textAlign: TextAlign.center,
+                obscureText: true,
+                decoration: InputDecoration(
+                  labelText: 'Password',
+                  labelStyle: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                style: TextStyle(
+                  color: Colors.green,
+                ),
               ),
-              obscureText: true,
-            ),
-            TextFormField(
-              validator: (income_input) {
-                // if(income_input.length < 4) {
-                //   return 'Your pass word needs at least 6 characters';
-                // }
-              },
-              onSaved: (incomeInput) => _income = incomeInput,
-              decoration: InputDecoration(
-                labelText: 'Incom'
+              TextFormField(
+                validator: validateMoney,
+                onSaved: (input) => _income = input,
+                textAlign: TextAlign.center,
+                decoration: InputDecoration(
+                  labelText: 'Daily Income',
+                  labelStyle: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                style: TextStyle(
+                  color: Colors.green,
+                ),
+                inputFormatters: [DecimalTextInputFormatter(decimalRange: 2)],
+                keyboardType: TextInputType.numberWithOptions(decimal: true),
               ),
-              inputFormatters: [DecimalTextInputFormatter(decimalRange: 2)],
-              keyboardType: TextInputType.numberWithOptions(decimal: true),
-            ),
-            TextFormField(
-              validator: (budget_input) {
-                // if(budget_input.length < 4) {
-                //   return 'Your pass word needs at least 6 characters';
-                // }
-              },
-              onSaved: (budgetInput) => _budget = budgetInput,
-              decoration: InputDecoration(
-                labelText: 'Budget'
+              TextFormField(
+                validator: validateMoney,
+                onSaved: (input) => _budget = input,
+                textAlign: TextAlign.center,
+                decoration: InputDecoration(
+                  labelText: 'Daily Budget',
+                  labelStyle: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                style: TextStyle(
+                  color: Colors.green,
+                ),
+                inputFormatters: [DecimalTextInputFormatter(decimalRange: 2)],
+                keyboardType: TextInputType.numberWithOptions(decimal: true),
               ),
-              inputFormatters: [DecimalTextInputFormatter(decimalRange: 2)],
-              keyboardType: TextInputType.numberWithOptions(decimal: true),
-            ),
-            Container(
-              height: 80,
-              child: FloatingActionButton.extended(
-                heroTag: 0,
-                label: Text('Register'),
-                onPressed: register,
-              ),
-            )
-          ],
+            ],
+          ),
+        ),
+      ),
+      bottomNavigationBar: BottomAppBar(
+        child: FloatingActionButton.extended(
+          heroTag: 0,
+          label: Text('Register'),
+          onPressed: register,
         ),
       ),
     );

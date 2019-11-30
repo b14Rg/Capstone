@@ -9,7 +9,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'NU Budget',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
+        canvasColor: Colors.grey[800],
+        bottomAppBarColor: Colors.grey[800],
       ),
       home: WelcomePage(),
     );

@@ -8,7 +8,6 @@ class WelcomePage extends StatefulWidget {
 }
 
 class _WelcomeState extends State<WelcomePage> {
-
   void navigateSignIn() {
     Navigator.push(
       context,
@@ -21,12 +20,11 @@ class _WelcomeState extends State<WelcomePage> {
 
   void navigateSignUp() {
     Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => RegisterPage(),
-        fullscreenDialog: true,
-      )
-    );
+        context,
+        MaterialPageRoute(
+          builder: (context) => RegisterPage(),
+          fullscreenDialog: true,
+        ));
   }
 
   @override
@@ -37,7 +35,7 @@ class _WelcomeState extends State<WelcomePage> {
       ),
       body: Center(
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             FloatingActionButton.extended(
               heroTag: 0,

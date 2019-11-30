@@ -1,13 +1,8 @@
 import 'package:capstone_application/models/user.dart';
-import 'package:capstone_application/pages/ApiDemoPage.dart';
-import 'package:capstone_application/pages/BudgetPage.dart';
+import 'package:capstone_application/pages/CustomDialog.dart';
 import 'package:capstone_application/pages/ExpensesPage.dart';
-import 'package:capstone_application/pages/IncomePage.dart';
 import 'package:capstone_application/pages/SettingsPage.dart';
-import 'package:capstone_application/pages/WelcomePage.dart';
 import 'package:flutter/material.dart';
-
-
 
 class OptionsPage extends StatefulWidget {
   final User user;
@@ -37,7 +32,7 @@ class _OptionsState extends State<OptionsPage> {
         ),
         title: Text('Options'),
       ),
-      body: ListView (
+      body: ListView(
         padding: const EdgeInsets.all(25.0),
         scrollDirection: Axis.vertical,
         children: <Widget>[
@@ -45,14 +40,14 @@ class _OptionsState extends State<OptionsPage> {
             height: 80,
             child: FloatingActionButton.extended(
               heroTag: 2,
-              label: Text('Budgets'),
+              label: Text('Expenses'),
               onPressed: () {
                 Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => BudgetPage(userBudget: _user.budget),
-                  )
-                );
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          ExpensesPage(userExpenses: _user.expenses),
+                    ));
               },
             ),
           ),
@@ -63,11 +58,15 @@ class _OptionsState extends State<OptionsPage> {
               heroTag: 3,
               label: Text('Income'),
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => IncomePage(userIncome: _user.income),
-                  )
+                showDialog(
+                  context: context,
+                  builder: (BuildContext context) => CustomDialog(
+                    title: 'Daily Income',
+                    value: '${_user.income.daily.toStringAsFixed(2)}',
+                    income: true,
+                    budget: false,
+                    user: _user,
+                  ),
                 );
               },
             ),
@@ -77,13 +76,17 @@ class _OptionsState extends State<OptionsPage> {
             height: 80,
             child: FloatingActionButton.extended(
               heroTag: 4,
-              label: Text('Expenses'),
+              label: Text('Budget'),
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => ExpensesPage(userExpenses: _user.expenses),
-                  )
+                showDialog(
+                  context: context,
+                  builder: (BuildContext context) => CustomDialog(
+                      title: 'Daily Budget',
+                      value: '${_user.budget.daily.toStringAsFixed(2)}',
+                      income: false,
+                      budget: true,
+                      user: _user,
+                    ),
                 );
               },
             ),
@@ -96,30 +99,14 @@ class _OptionsState extends State<OptionsPage> {
               label: Text('Settings'),
               onPressed: () {
                 Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => SettingsPage(user: _user),
-                  )
-                );
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SettingsPage(user: _user),
+                    ));
               },
             ),
           ),
           Divider(),
-          Container(
-            height: 80,
-            child: FloatingActionButton.extended(
-              heroTag: 6,
-              label: Text('API request Demo'),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => ApiDemoPage(),
-                  )
-                );
-              },
-            ),
-          ),
         ],
       ),
       bottomNavigationBar: BottomAppBar(
@@ -128,16 +115,13 @@ class _OptionsState extends State<OptionsPage> {
           elevation: 0,
           label: Text('Sign out'),
           onPressed: () {
-            Navigator.pushReplacement(
+            Navigator.popUntil(
               context,
-              MaterialPageRoute(
-                builder: (context) => WelcomePage(),
-              )
+              ModalRoute.withName('/'),
             );
           },
         ),
       ),
     );
   }
-  
 }

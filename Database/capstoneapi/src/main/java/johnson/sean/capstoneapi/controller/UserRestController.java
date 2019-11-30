@@ -60,19 +60,25 @@ public class UserRestController {
 
     @RequestMapping(path = "/{userId}", method = RequestMethod.PUT)
     @Transactional
-    public void updateUser(@PathVariable int userId, @RequestBody User newValues) {
+    public int updateUser(@PathVariable int userId, @RequestBody User newValues) {
         User existingUser = getById(userId);
         existingUser.copy(newValues);
+        incomeRepo.saveAndFlush(existingUser.getIncome());
+        budgetRepo.saveAndFlush(existingUser.getBudget());
         userRepo.saveAndFlush(existingUser);
+        return existingUser.getId();
     }
 
     @RequestMapping(path = "/{userId}", method = RequestMethod.PATCH)
     @Transactional
-    public void updateUserProperties(@PathVariable int userId, @RequestBody Map<String, Object> newValues) {
+    public int updateUserProperties(@PathVariable int userId, @RequestBody Map<String, Object> newValues) {
         User existingUser = getById(userId);
         existingUser.setIncome((Income) newValues.get("income"));
         existingUser.setBudget((Budget) newValues.get("budget"));
+        incomeRepo.saveAndFlush(existingUser.getIncome());
+        budgetRepo.saveAndFlush(existingUser.getBudget());
         userRepo.saveAndFlush(existingUser);
+        return existingUser.getId();
     }
 
     @RequestMapping(path = "/searchByEmail", method = RequestMethod.GET)

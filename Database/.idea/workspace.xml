@@ -2,40 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fd26abf-bd1e-4774-b013-ba249e88e322" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Application/capstone_application/lib/models/budget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/capstone_application/lib/models/budget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Application/capstone_application/lib/models/credentials.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Application/capstone_application/lib/models/income.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/capstone_application/lib/models/income.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Application/capstone_application/lib/models/user.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/capstone_application/lib/models/user.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/ApiDemoPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/ApiDemoPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/capstone_application/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/capstone_application/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/AddExpensePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/AddExpensePage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/BudgetPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/BudgetPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/ExpensesPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/ExpensesPage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/HomePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/HomePage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/IncomePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/IncomePage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/LoginPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/LoginPage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/OptionsPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/OptionsPage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/RegisterPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/RegisterPage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/SettingsPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/SettingsPage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/WelcomePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../Application/capstone_application/lib/pages/WelcomePage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/controller/ExpenseRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/controller/ExpenseRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/controller/ItemRestController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/controller/UserRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/controller/UserRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/Expense.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/Expense.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/Item.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/repositories/ItemJpaRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/repositories/UserJpaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/src/main/java/johnson/sean/capstoneapi/model/repositories/UserJpaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/capstoneapi/target/capstone.war" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/capstone.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/capstone/WEB-INF/classes/johnson/sean/capstoneapi/controller/UserRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/capstone/WEB-INF/classes/johnson/sean/capstoneapi/controller/UserRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/capstone/WEB-INF/classes/johnson/sean/capstoneapi/model/repositories/UserJpaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/capstone/WEB-INF/classes/johnson/sean/capstoneapi/model/repositories/UserJpaRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/controller/ExpenseRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/controller/ExpenseRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/controller/ItemRestController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/controller/UserRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/controller/UserRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/model/Expense.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/model/Expense.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/model/Item.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/model/repositories/ItemJpaRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/model/repositories/UserJpaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/capstoneapi/target/classes/johnson/sean/capstoneapi/model/repositories/UserJpaRepository.class" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,6 +44,11 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ACTIVE_CLOUD_PROJECT_ACCOUNT" value="b4k4.7326@gmail.com" />
     <property name="ACTIVE_CLOUD_PROJECT_ID" value="sylvan-mode-251308" />
@@ -77,18 +63,6 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Google App Engine Deployment.Google App Engine Deployment">
     <configuration name="CapstoneApi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -125,6 +99,23 @@
         <item itemvalue="Application.CapstoneApi" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Google App Engine" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -172,6 +163,32 @@
     <MESSAGE value="Fixed deleting a user also deletes the connected tables&#10;credentials&#10;income&#10;budget" />
     <MESSAGE value="Deployed to google app engine&#10;Connects to google cloud sql and hosts api via localhost" />
     <option name="LAST_COMMIT_MESSAGE" value="Deployed to google app engine&#10;Connects to google cloud sql and hosts api via localhost" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="960" y="447" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1575112156340">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="960" y="447" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.2560.1440/2560.145.1920.1080@0.0.2560.1440" timestamp="1575112156340" />
+    <state width="1244" height="413" key="GridCell.Tab.0.bottom" timestamp="1575113271682">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1244" height="413" key="GridCell.Tab.0.bottom/0.0.2560.1440/2560.145.1920.1080@0.0.2560.1440" timestamp="1575113271682" />
+    <state width="1244" height="413" key="GridCell.Tab.0.center" timestamp="1575113271682">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1244" height="413" key="GridCell.Tab.0.center/0.0.2560.1440/2560.145.1920.1080@0.0.2560.1440" timestamp="1575113271682" />
+    <state width="1244" height="413" key="GridCell.Tab.0.left" timestamp="1575113271681">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1244" height="413" key="GridCell.Tab.0.left/0.0.2560.1440/2560.145.1920.1080@0.0.2560.1440" timestamp="1575113271681" />
+    <state width="1244" height="413" key="GridCell.Tab.0.right" timestamp="1575113271682">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1244" height="413" key="GridCell.Tab.0.right/0.0.2560.1440/2560.145.1920.1080@0.0.2560.1440" timestamp="1575113271682" />
+    <state x="976" y="542" key="com.intellij.ide.util.TipDialog" timestamp="1575112178567">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="976" y="542" key="com.intellij.ide.util.TipDialog/0.0.2560.1440/2560.145.1920.1080@0.0.2560.1440" timestamp="1575112178567" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Database$CapstoneApi.ic" NAME="CapstoneApi Coverage Results" MODIFIED="1574730959442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
